@@ -1,0 +1,4 @@
+@app.route('/gallery_osiligi')
+def gallery_osiligi():
+    country_images = [{'filename': 'osiligi/osiligi1.jpg'}, {'filename': 'osiligi/osiligi2.jpg'}, {'filename': 'osiligi/osiligi3.jpg'}, {'filename': 'osiligi/osiligi4.jpg'}, {'filename': 'osiligi/osiligi5.jpg'}, {'filename': 'osiligi/osiligi6.jpg'}, {'filename': 'osiligi/osiligi7.jpg'}, {'filename': 'osiligi/osiligi8.jpg'}, {'filename': 'osiligi/osiligi9.jpg'}]
+    return render_template('gallery_osiligi.html', country_images=country_images)

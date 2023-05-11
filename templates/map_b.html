@@ -79,11 +79,11 @@
                     container: 'map',
                     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
                     style: 'mapbox://styles/sebastiangraeff/clex9r70g000401n0mrl5epdp',
-                    center: [34.239,-0.010],
-                    zoom: 10
+                    center: [24.6846, -11.8927],
+                    zoom: 3.8
                 });
                 // IMPORTANT! Change path directory and location of csv file
-                const csvUrl = 'https://raw.githubusercontent.com/sebastian-graeff/jointhepump/main/WebsiteMapLocations2.csv';
+                const csvUrl = 'https://raw.githubusercontent.com/Aoyamaxx/Bluepump-flask-edition/3133e678e5f7be4016dafa42004364b57ec3aca2/static/map_data/WebsiteMapLocations2.csv';
                 fetch(csvUrl)
                     .then(response => response.text())
                     .then(data => {

@@ -271,14 +271,6 @@ def donate_a():
     log_site_visit_once_a(visitor_id)
     return render_template('donate_a.html', visitor_id=visitor_id)
 
-@app.route('/siaya_a')
-def siaya_a():
-    if 'visitor_id' not in session:
-        session["visitor_id"] = generate_visitor_id_a()
-    visitor_id = session["visitor_id"]
-    log_site_visit_once_a(visitor_id)
-    return render_template('siaya_a.html', visitor_id=visitor_id)
-
 @app.route('/header_a')
 def header_a():
     return render_template('header_a.html')
@@ -302,7 +294,7 @@ def learn_more_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('learn_more_a.html', visitor_id=visitor_id)
-    
+
 @app.route('/gallery_a')
 def gallery_a():
     if 'visitor_id' not in session:
@@ -346,7 +338,7 @@ def gallery_gambia_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_gambia_a.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_malawi_a')
 def gallery_malawi_a():
     country_images = [{'filename': 'malawi/malawi1.jpg'}, {'filename': 'malawi/malawi2.jpg'}, {'filename': 'malawi/malawi3.jpg'}, {'filename': 'malawi/malawi4.jpg'}, {'filename': 'malawi/malawi5.jpg'}, {'filename': 'malawi/malawi6.jpg'}, {'filename': 'malawi/malawi7.jpg'}]
@@ -355,7 +347,7 @@ def gallery_malawi_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_malawi_b.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_sierra_leone_a')
 def gallery_sierra_leone_a():
     country_images = [{'filename': 'sierra_leone/sierra_leone1.jpg'}, {'filename': 'sierra_leone/sierra_leone2.jpg'}, {'filename': 'sierra_leone/sierra_leone3.jpg'}, {'filename': 'sierra_leone/sierra_leone4.jpg'}, {'filename': 'sierra_leone/sierra_leone5.jpg'}, {'filename': 'sierra_leone/sierra_leone6.jpg'}, {'filename': 'sierra_leone/sierra_leone7.jpg'}, {'filename': 'sierra_leone/sierra_leone8.jpg'}, {'filename': 'sierra_leone/sierra_leone9.jpg'}, {'filename': 'sierra_leone/sierra_leone10.jpg'}, {'filename': 'sierra_leone/sierra_leone11.jpg'}, {'filename': 'sierra_leone/sierra_leone12.jpg'}, {'filename': 'sierra_leone/sierra_leone13.jpg'}, {'filename': 'sierra_leone/sierra_leone14.jpg'}, {'filename': 'sierra_leone/sierra_leone15.jpg'}, {'filename': 'sierra_leone/sierra_leone16.jpg'}, {'filename': 'sierra_leone/sierra_leone17.jpg'}, {'filename': 'sierra_leone/sierra_leone18.jpg'}, {'filename': 'sierra_leone/sierra_leone19.jpg'}, {'filename': 'sierra_leone/sierra_leone20.jpg'}, {'filename': 'sierra_leone/sierra_leone21.jpg'}, {'filename': 'sierra_leone/sierra_leone22.jpg'}, {'filename': 'sierra_leone/sierra_leone23.jpg'}, {'filename': 'sierra_leone/sierra_leone24.jpg'}, {'filename': 'sierra_leone/sierra_leone25.jpg'}, {'filename': 'sierra_leone/sierra_leone26.jpg'}, {'filename': 'sierra_leone/sierra_leone27.jpg'}, {'filename': 'sierra_leone/sierra_leone28.jpg'}, {'filename': 'sierra_leone/sierra_leone29.jpg'}, {'filename': 'sierra_leone/sierra_leone30.jpg'}, {'filename': 'sierra_leone/sierra_leone31.jpg'}, {'filename': 'sierra_leone/sierra_leone32.jpg'}, {'filename': 'sierra_leone/sierra_leone33.jpg'}, {'filename': 'sierra_leone/sierra_leone34.jpg'}, {'filename': 'sierra_leone/sierra_leone35.jpg'}, {'filename': 'sierra_leone/sierra_leone36.jpg'}, {'filename': 'sierra_leone/sierra_leone37.jpg'}, {'filename': 'sierra_leone/sierra_leone38.jpg'}, {'filename': 'sierra_leone/sierra_leone39.jpg'}, {'filename': 'sierra_leone/sierra_leone40.jpg'}, {'filename': 'sierra_leone/sierra_leone41.jpg'}, {'filename': 'sierra_leone/sierra_leone42.jpg'}, {'filename': 'sierra_leone/sierra_leone43.jpg'}]
@@ -364,7 +356,7 @@ def gallery_sierra_leone_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_sierra_leone_a.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_sudan_a')
 def gallery_sudan_a():
     country_images = [{'filename': 'sudan/sudan1.jpg'}, {'filename': 'sudan/sudan2.jpg'}, {'filename': 'sudan/sudan3.jpg'}, {'filename': 'sudan/sudan4.jpg'}, {'filename': 'sudan/sudan5.jpg'}, {'filename': 'sudan/sudan6.jpg'}]
@@ -373,7 +365,7 @@ def gallery_sudan_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_sudan_a.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_tanzania_a')
 def gallery_tanzania_a():
     country_images = [{'filename': 'tanzania/tanzania1.jpg'}, {'filename': 'tanzania/tanzania2.jpg'}, {'filename': 'tanzania/tanzania3.jpg'}, {'filename': 'tanzania/tanzania4.jpg'}, {'filename': 'tanzania/tanzania5.jpg'}, {'filename': 'tanzania/tanzania6.jpg'}, {'filename': 'tanzania/tanzania7.jpg'}, {'filename': 'tanzania/tanzania8.jpg'}, {'filename': 'tanzania/tanzania9.jpg'}, {'filename': 'tanzania/tanzania10.jpg'}, {'filename': 'tanzania/tanzania11.jpg'}, {'filename': 'tanzania/tanzania12.jpg'}, {'filename': 'tanzania/tanzania13.jpg'}, {'filename': 'tanzania/tanzania14.jpg'}, {'filename': 'tanzania/tanzania15.jpg'}, {'filename': 'tanzania/tanzania16.jpg'}, {'filename': 'tanzania/tanzania17.jpg'}, {'filename': 'tanzania/tanzania18.jpg'}, {'filename': 'tanzania/tanzania19.jpg'}, {'filename': 'tanzania/tanzania20.jpg'}, {'filename': 'tanzania/tanzania21.jpg'}, {'filename': 'tanzania/tanzania22.jpg'}]
@@ -382,6 +374,15 @@ def gallery_tanzania_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_tanzania_a.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/osiligi_a')
+def osiligi_a():
+    country_images = [{'filename': 'osiligi/osiligi1.jpg'}, {'filename': 'osiligi/osiligi2.jpg'}, {'filename': 'osiligi/osiligi3.jpg'}, {'filename': 'osiligi/osiligi4.jpg'}, {'filename': 'osiligi/osiligi5.jpg'}, {'filename': 'osiligi/osiligi6.jpg'}, {'filename': 'osiligi/osiligi7.jpg'}, {'filename': 'osiligi/osiligi8.jpg'}, {'filename': 'osiligi/osiligi9.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_a()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_a(visitor_id)
+    return render_template('osiligi_a.html', country_images=country_images, visitor_id=visitor_id)
 
 
 
@@ -530,14 +531,6 @@ def donate_b():
     log_site_visit_b(visitor_id)
     return render_template('donate_b.html', visitor_id=visitor_id)
 
-@app.route('/siaya_b')
-def siaya_b():
-    if 'visitor_id' not in session:
-        session["visitor_id"] = generate_visitor_id_b()
-    visitor_id = session["visitor_id"]
-    log_site_visit_once_b(visitor_id)
-    return render_template('siaya_b.html', visitor_id=visitor_id)
-
 @app.route('/header_b')
 def header_b():
     return render_template('header_b.html')
@@ -565,7 +558,7 @@ def learn_more_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('learn_more_b.html', visitor_id=visitor_id)
-    
+
 @app.route('/gallery_b')
 def gallery_b():
     if 'visitor_id' not in session:
@@ -600,7 +593,7 @@ def gallery_burkina_b():
     visitor_id = session["visitor_id"]
     log_site_visit_b(visitor_id)
     return render_template('gallery_burkina_b.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_gambia_b')
 def gallery_gambia_b():
     country_images = [{'filename': 'gambia/gambia1.jpg'}, {'filename': 'gambia/gambia2.jpg'}, {'filename': 'gambia/gambia3.jpg'}, {'filename': 'gambia/gambia4.jpg'}, {'filename': 'gambia/gambia5.jpg'}, {'filename': 'gambia/gambia6.jpg'}, {'filename': 'gambia/gambia7.jpg'}, {'filename': 'gambia/gambia8.jpg'}, {'filename': 'gambia/gambia9.jpg'}, {'filename': 'gambia/gambia10.jpg'}, {'filename': 'gambia/gambia11.jpg'}, {'filename': 'gambia/gambia12.jpg'}, {'filename': 'gambia/gambia13.jpg'}, {'filename': 'gambia/gambia14.jpg'}, {'filename': 'gambia/gambia15.jpg'}, {'filename': 'gambia/gambia16.jpg'}, {'filename': 'gambia/gambia17.jpg'}, {'filename': 'gambia/gambia18.jpg'}, {'filename': 'gambia/gambia19.jpg'}, {'filename': 'gambia/gambia20.jpg'}, {'filename': 'gambia/gambia21.jpg'}, {'filename': 'gambia/gambia22.jpg'}, {'filename': 'gambia/gambia23.jpg'}, {'filename': 'gambia/gambia24.jpg'}, {'filename': 'gambia/gambia25.jpg'}, {'filename': 'gambia/gambia26.jpg'}, {'filename': 'gambia/gambia27.jpg'}, {'filename': 'gambia/gambia28.jpg'}, {'filename': 'gambia/gambia29.jpg'}, {'filename': 'gambia/gambia30.jpg'}, {'filename': 'gambia/gambia31.jpg'}, {'filename': 'gambia/gambia32.jpg'}, {'filename': 'gambia/gambia33.jpg'}, {'filename': 'gambia/gambia34.jpg'}, {'filename': 'gambia/gambia35.jpg'}, {'filename': 'gambia/gambia36.jpg'}, {'filename': 'gambia/gambia37.jpg'}, {'filename': 'gambia/gambia38.jpg'}]
@@ -609,7 +602,7 @@ def gallery_gambia_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('gallery_gambia_b.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_malawi_b')
 def gallery_malawi_b():
     country_images = [{'filename': 'malawi/malawi1.jpg'}, {'filename': 'malawi/malawi2.jpg'}, {'filename': 'malawi/malawi3.jpg'}, {'filename': 'malawi/malawi4.jpg'}, {'filename': 'malawi/malawi5.jpg'}, {'filename': 'malawi/malawi6.jpg'}, {'filename': 'malawi/malawi7.jpg'}]
@@ -618,7 +611,7 @@ def gallery_malawi_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('gallery_malawi_b.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_sierra_leone_b')
 def gallery_sierra_leone_b():
     country_images = [{'filename': 'sierra_leone/sierra_leone1.jpg'}, {'filename': 'sierra_leone/sierra_leone2.jpg'}, {'filename': 'sierra_leone/sierra_leone3.jpg'}, {'filename': 'sierra_leone/sierra_leone4.jpg'}, {'filename': 'sierra_leone/sierra_leone5.jpg'}, {'filename': 'sierra_leone/sierra_leone6.jpg'}, {'filename': 'sierra_leone/sierra_leone7.jpg'}, {'filename': 'sierra_leone/sierra_leone8.jpg'}, {'filename': 'sierra_leone/sierra_leone9.jpg'}, {'filename': 'sierra_leone/sierra_leone10.jpg'}, {'filename': 'sierra_leone/sierra_leone11.jpg'}, {'filename': 'sierra_leone/sierra_leone12.jpg'}, {'filename': 'sierra_leone/sierra_leone13.jpg'}, {'filename': 'sierra_leone/sierra_leone14.jpg'}, {'filename': 'sierra_leone/sierra_leone15.jpg'}, {'filename': 'sierra_leone/sierra_leone16.jpg'}, {'filename': 'sierra_leone/sierra_leone17.jpg'}, {'filename': 'sierra_leone/sierra_leone18.jpg'}, {'filename': 'sierra_leone/sierra_leone19.jpg'}, {'filename': 'sierra_leone/sierra_leone20.jpg'}, {'filename': 'sierra_leone/sierra_leone21.jpg'}, {'filename': 'sierra_leone/sierra_leone22.jpg'}, {'filename': 'sierra_leone/sierra_leone23.jpg'}, {'filename': 'sierra_leone/sierra_leone24.jpg'}, {'filename': 'sierra_leone/sierra_leone25.jpg'}, {'filename': 'sierra_leone/sierra_leone26.jpg'}, {'filename': 'sierra_leone/sierra_leone27.jpg'}, {'filename': 'sierra_leone/sierra_leone28.jpg'}, {'filename': 'sierra_leone/sierra_leone29.jpg'}, {'filename': 'sierra_leone/sierra_leone30.jpg'}, {'filename': 'sierra_leone/sierra_leone31.jpg'}, {'filename': 'sierra_leone/sierra_leone32.jpg'}, {'filename': 'sierra_leone/sierra_leone33.jpg'}, {'filename': 'sierra_leone/sierra_leone34.jpg'}, {'filename': 'sierra_leone/sierra_leone35.jpg'}, {'filename': 'sierra_leone/sierra_leone36.jpg'}, {'filename': 'sierra_leone/sierra_leone37.jpg'}, {'filename': 'sierra_leone/sierra_leone38.jpg'}, {'filename': 'sierra_leone/sierra_leone39.jpg'}, {'filename': 'sierra_leone/sierra_leone40.jpg'}, {'filename': 'sierra_leone/sierra_leone41.jpg'}, {'filename': 'sierra_leone/sierra_leone42.jpg'}, {'filename': 'sierra_leone/sierra_leone43.jpg'}]
@@ -627,7 +620,7 @@ def gallery_sierra_leone_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('gallery_sierra_leone_b.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_sudan_b')
 def gallery_sudan_b():
     country_images = [{'filename': 'sudan/sudan1.jpg'}, {'filename': 'sudan/sudan2.jpg'}, {'filename': 'sudan/sudan3.jpg'}, {'filename': 'sudan/sudan4.jpg'}, {'filename': 'sudan/sudan5.jpg'}, {'filename': 'sudan/sudan6.jpg'}]
@@ -636,7 +629,7 @@ def gallery_sudan_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('gallery_sudan_b.html', country_images=country_images, visitor_id=visitor_id)
-    
+
 @app.route('/gallery_tanzania_b')
 def gallery_tanzania_b():
     country_images = [{'filename': 'tanzania/tanzania1.jpg'}, {'filename': 'tanzania/tanzania2.jpg'}, {'filename': 'tanzania/tanzania3.jpg'}, {'filename': 'tanzania/tanzania4.jpg'}, {'filename': 'tanzania/tanzania5.jpg'}, {'filename': 'tanzania/tanzania6.jpg'}, {'filename': 'tanzania/tanzania7.jpg'}, {'filename': 'tanzania/tanzania8.jpg'}, {'filename': 'tanzania/tanzania9.jpg'}, {'filename': 'tanzania/tanzania10.jpg'}, {'filename': 'tanzania/tanzania11.jpg'}, {'filename': 'tanzania/tanzania12.jpg'}, {'filename': 'tanzania/tanzania13.jpg'}, {'filename': 'tanzania/tanzania14.jpg'}, {'filename': 'tanzania/tanzania15.jpg'}, {'filename': 'tanzania/tanzania16.jpg'}, {'filename': 'tanzania/tanzania17.jpg'}, {'filename': 'tanzania/tanzania18.jpg'}, {'filename': 'tanzania/tanzania19.jpg'}, {'filename': 'tanzania/tanzania20.jpg'}, {'filename': 'tanzania/tanzania21.jpg'}, {'filename': 'tanzania/tanzania22.jpg'}]
@@ -645,6 +638,15 @@ def gallery_tanzania_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('gallery_tanzania_b.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/osiligi_b')
+def osiligi_b():
+    country_images = [{'filename': 'osiligi/osiligi1.jpg'}, {'filename': 'osiligi/osiligi2.jpg'}, {'filename': 'osiligi/osiligi3.jpg'}, {'filename': 'osiligi/osiligi4.jpg'}, {'filename': 'osiligi/osiligi5.jpg'}, {'filename': 'osiligi/osiligi6.jpg'}, {'filename': 'osiligi/osiligi7.jpg'}, {'filename': 'osiligi/osiligi8.jpg'}, {'filename': 'osiligi/osiligi9.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_b()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_b(visitor_id)
+    return render_template('osiligi_b.html', country_images=country_images, visitor_id=visitor_id)
 
 if __name__ == '__main__':
     app.run()
