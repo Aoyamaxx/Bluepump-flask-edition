@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Make a donation</title>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <head>
+        <title>Fund Information</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-		<meta charset="UTF-8">
-  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
-		<script>let serverVisitorId = '{{ visitor_id }}';</script>
+        <script>let serverVisitorId = '{{ visitor_id }}';</script>
+        <style>
+            .subtitle {
+                font-weight: bold;
+                font-size: 1.25rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+            }
 
-	</head>
-	<body>
-		<div id="header-a"></div>
+            .underline {
+                text-decoration: underline;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="header-a"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center my-4">Fund Information</h1>
+
+                    <p>When individuals decide to donate to the Join the Pipe Foundation, it empowers the Foundation to continue with its mission and objectives; to provide individuals in less fortunate situations with the ability to have access to clean drinking water.</p>
+
+                    <p>Join the Pipe Foundation tries to provide Bluepumps to as many rural communities as possible. With Africa’s Sub-Saharan climate, some Bluepumps are installed within the harshest environments in the world.</p>
+
+                    <p>Every donation makes an impact, no matter the amount. With each donation, the Foundation can use these proceeds to maintain Bluepumps in Sub-Saharan Africa or install additional Bluepumps for individuals that need them the most.</p>
+
+                    <p>Join the Pipe Foundation works with its partners within Sub-Saharan Africa to assess the condition of the Bluepumps currently installed. If Bluepumps are non-operational, the Foundation coordinates with its partners to repair the Bluepump as quickly as possible. If communities require a Bluepump, the Foundation coordinates with its partners and local community members to assess the most optimal location for the Bluepump.</p>
+
+                    <p>As you can imagine, each assessment and coordination effort costs money. Each location and climate requires a different amount of materials for installing Bluepumps. Each area and community uses the Bluepump frequently in different intervals, which requires more effort to understand the situation of each Bluepump.</p>
+
+                    <p>The Bluepump was first developed in 2003. Twenty years later, the Bluepump is still available in Sub-Saharan Africa, and we would like to continue to provide this handpump.</p>
+
+                    <p>If you’d like to donate, please visit our <a href="https://www.paypal.com/paypalme/JointhePipeFoundatio">Paypal Account</a>. If you’d like to see the existing impact that has been created, please visit our <a href="{{ url_for('gallery_a') }}">Bluepump Gallery</a>.</p>
+
+                    <p>Sincerely,</p>
+
+                    <p>Join the Pipe Foundation Team</p>
+
+                </div>
+            </div>
+        </div>
 
         <div class="separator"></div>
-		<div id="footer-a"></div>
-		<script src="{{ url_for('static', filename='js/script_a.js') }}"></script>
-		<div id="load-privacy-banner-a"></div>
-	</body>
+        <div id="footer-a"></div>
+        <script src="{{ url_for('static', filename='js/script_a.js') }}"></script>
+        <div id="load-privacy-banner-a"></div>
+    </body>
 </html>

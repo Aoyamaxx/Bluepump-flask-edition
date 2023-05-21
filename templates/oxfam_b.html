@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oxfam International</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+        <style>
+            .card {
+                overflow: hidden;
+            }
+
+            .card-img-container {
+                width: 100%;
+                height: 0;
+                padding-bottom: 75%; /* Adjust this value to change the aspect ratio of the container */
+                position: relative;
+                overflow: hidden;
+            }
+
+            .card-img-top {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                object-fit: cover;
+            }
+        </style>
+
+        <script>let serverVisitorId = '{{ visitor_id }}';</script>
+
+    </head>
+    <body class="web_background">
+        <div id="header-b"></div>
+
+        <div id="load-donate-popup-b" style="display: none;"></div>
+
+        <div class="project-page">
+            <div class="project-page-header-container">
+            	<div class="project-page-header">
+
+                <h1>Oxfam</h1>
+
+                <p>The Bluepump was introduced in Kenya in 2008. In Kenya, Oxfam began with 4 Bluepumps before installing many more Bluepumps in the following years. At greater depths, the Bluepump performs better than other handpumps in Kenya. In Northern Kenya, such as Turkana, the region experiences very little rainfall and deep groundwater levels. Because of droughts, communities in this region heavily rely on everyday use of the Bluepump and find it able to withstand such frequent usage.</p>
+
+                <p>As a result of the Bluepump installation in Kenya, Oxfam decided to install Bluepumps in South Sudan. In 2011, Oxfam began installing Bluepumps in Maban County, located in the Upper Nile State of South Sudan. Oxfam collaborated with the Join the Pipe Foundation to assist with the refugee response in the region. In 2014, Oxfam installed more Bluepumps in the Jonglei State in South Sudan. Then, in 2018, Bluepumps were installed in Juba, South Sudan.</p>
+
+            	</div>
+			</div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                {% for image in country_images %}
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="{{ url_for('static', filename='images/' + image.filename) }}" data-lightbox="gallery" data-title="Oxfam Gallery">
+                                <div class="card-img-container">
+                                    <img src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top" alt="Oxfam Image">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+		<div class="separator"></div>
+
+        <div id="footer-b"></div>
+        <script src="{{ url_for('static', filename='js/script_b.js') }}"></script>
+		<div id="load-privacy-banner-b"></div>
+    </body>
+</html>

@@ -303,6 +303,14 @@ def gallery_a():
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_a.html', visitor_id=visitor_id)
 
+@app.route('/t_s_a')
+def t_s_a():
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_a()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_a(visitor_id)
+    return render_template('t_s_a.html', visitor_id=visitor_id)
+
 @app.route('/gallery_mali_a')
 def gallery_mali_a():
     country_images = [{'filename': 'mali/mali1.jpg'}, {'filename': 'mali/mali2.jpg'}, {'filename': 'mali/mali3.jpg'}, {'filename': 'mali/mali4.jpg'}, {'filename': 'mali/mali5.jpg'}, {'filename': 'mali/mali6.jpg'}, {'filename': 'mali/mali7.jpg'}, {'filename': 'mali/mali8.jpg'}, {'filename': 'mali/mali9.jpg'}, {'filename': 'mali/mali10.jpg'}, {'filename': 'mali/mali11.jpg'}, {'filename': 'mali/mali12.jpg'}, {'filename': 'mali/mali13.jpg'}, {'filename': 'mali/mali14.jpg'}, {'filename': 'mali/mali15.jpg'}, {'filename': 'mali/mali16.jpg'}, {'filename': 'mali/mali17.jpg'}, {'filename': 'mali/mali18.jpg'}, {'filename': 'mali/mali19.jpg'}, {'filename': 'mali/mali20.jpg'}, {'filename': 'mali/mali22.jpg'}, {'filename': 'mali/mali23.jpg'}, {'filename': 'mali/mali24.jpg'}, {'filename': 'mali/mali25.jpg'}, {'filename': 'mali/mali27.jpg'}, {'filename': 'mali/mali28.jpg'}, {'filename': 'mali/mali29.jpg'}, {'filename': 'mali/mali30.jpg'}, {'filename': 'mali/mali31.jpg'}, {'filename': 'mali/mali33.jpg'}, {'filename': 'mali/mali34.jpg'}, {'filename': 'mali/mali35.jpg'}, {'filename': 'mali/mali36.jpg'}, {'filename': 'mali/mali37.jpg'}, {'filename': 'mali/mali38.jpg'}, {'filename': 'mali/mali39.jpg'}, {'filename': 'mali/mali40.jpg'}, {'filename': 'mali/mali41.jpg'}, {'filename': 'mali/mali42.jpg'}, {'filename': 'mali/mali43.jpg'}, {'filename': 'mali/mali44.jpg'}]
@@ -383,6 +391,33 @@ def osiligi_a():
     visitor_id = session["visitor_id"]
     log_site_visit_once_a(visitor_id)
     return render_template('osiligi_a.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/mambo_a')
+def mambo_a():
+    country_images = [{'filename': 'mambo/mambo1.jpg'}, {'filename': 'mambo/mambo2.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_a()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_a(visitor_id)
+    return render_template('mambo_a.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/oxfam_a')
+def oxfam_a():
+    country_images = [{'filename': 'oxfam/oxfam1.jpg'}, {'filename': 'oxfam/oxfam2.jpg'}, {'filename': 'oxfam/oxfam3.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_a()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_a(visitor_id)
+    return render_template('oxfam_a.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/asap_a')
+def asap_a():
+    country_images = [{'filename': 'asap/asap1.jpg'}, {'filename': 'asap/asap2.jpg'}, {'filename': 'asap/asap3.jpg'}, {'filename': 'asap/asap4.jpg'}, {'filename': 'asap/asap5.jpg'}, {'filename': 'asap/asap6.jpg'}, {'filename': 'asap/asap7.jpg'}, {'filename': 'asap/asap8.jpg'}, {'filename': 'asap/asap9.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_a()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_a(visitor_id)
+    return render_template('asap_a.html', country_images=country_images, visitor_id=visitor_id)
 
 
 
@@ -567,6 +602,14 @@ def gallery_b():
     log_site_visit_once_a(visitor_id)
     return render_template('gallery_b.html', visitor_id=visitor_id)
 
+@app.route('/t_s_b')
+def t_s_b():
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_b()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_b(visitor_id)
+    return render_template('t_s_b.html', visitor_id=visitor_id)
+
 @app.route('/gallery_mali_b')
 def gallery_mali_b():
     country_images = [{'filename': 'mali/mali1.jpg'}, {'filename': 'mali/mali2.jpg'}, {'filename': 'mali/mali3.jpg'}, {'filename': 'mali/mali4.jpg'}, {'filename': 'mali/mali5.jpg'}, {'filename': 'mali/mali6.jpg'}, {'filename': 'mali/mali7.jpg'}, {'filename': 'mali/mali8.jpg'}, {'filename': 'mali/mali9.jpg'}, {'filename': 'mali/mali10.jpg'}, {'filename': 'mali/mali11.jpg'}, {'filename': 'mali/mali12.jpg'}, {'filename': 'mali/mali13.jpg'}, {'filename': 'mali/mali14.jpg'}, {'filename': 'mali/mali15.jpg'}, {'filename': 'mali/mali16.jpg'}, {'filename': 'mali/mali17.jpg'}, {'filename': 'mali/mali18.jpg'}, {'filename': 'mali/mali19.jpg'}, {'filename': 'mali/mali20.jpg'}, {'filename': 'mali/mali22.jpg'}, {'filename': 'mali/mali23.jpg'}, {'filename': 'mali/mali24.jpg'}, {'filename': 'mali/mali25.jpg'}, {'filename': 'mali/mali27.jpg'}, {'filename': 'mali/mali28.jpg'}, {'filename': 'mali/mali29.jpg'}, {'filename': 'mali/mali30.jpg'}, {'filename': 'mali/mali31.jpg'}, {'filename': 'mali/mali33.jpg'}, {'filename': 'mali/mali34.jpg'}, {'filename': 'mali/mali35.jpg'}, {'filename': 'mali/mali36.jpg'}, {'filename': 'mali/mali37.jpg'}, {'filename': 'mali/mali38.jpg'}, {'filename': 'mali/mali39.jpg'}, {'filename': 'mali/mali40.jpg'}, {'filename': 'mali/mali41.jpg'}, {'filename': 'mali/mali42.jpg'}, {'filename': 'mali/mali43.jpg'}, {'filename': 'mali/mali44.jpg'}]
@@ -647,6 +690,33 @@ def osiligi_b():
     visitor_id = session["visitor_id"]
     log_site_visit_once_b(visitor_id)
     return render_template('osiligi_b.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/mambo_b')
+def mambo_b():
+    country_images = [{'filename': 'mambo/mambo1.jpg'}, {'filename': 'mambo/mambo2.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_b()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_b(visitor_id)
+    return render_template('mambo_b.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/oxfam_b')
+def oxfam_b():
+    country_images = [{'filename': 'oxfam/oxfam1.jpg'}, {'filename': 'oxfam/oxfam2.jpg'}, {'filename': 'oxfam/oxfam3.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_b()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_b(visitor_id)
+    return render_template('oxfam_b.html', country_images=country_images, visitor_id=visitor_id)
+
+@app.route('/asap_b')
+def asap_b():
+    country_images = [{'filename': 'asap/asap1.jpg'}, {'filename': 'asap/asap2.jpg'}, {'filename': 'asap/asap3.jpg'}, {'filename': 'asap/asap4.jpg'}, {'filename': 'asap/asap5.jpg'}, {'filename': 'asap/asap6.jpg'}, {'filename': 'asap/asap7.jpg'}, {'filename': 'asap/asap8.jpg'}, {'filename': 'asap/asap9.jpg'}]
+    if 'visitor_id' not in session:
+        session["visitor_id"] = generate_visitor_id_b()
+    visitor_id = session["visitor_id"]
+    log_site_visit_once_b(visitor_id)
+    return render_template('asap_b.html', country_images=country_images, visitor_id=visitor_id)
 
 if __name__ == '__main__':
     app.run()

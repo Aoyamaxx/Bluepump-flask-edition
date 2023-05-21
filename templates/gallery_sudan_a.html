@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gallery Sudan</title>
+        <title>Gallery South Sudan</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <meta charset="UTF-8">
@@ -46,16 +46,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center my-4" style="padding: 3vh;">Sudan BluePump Gallery</h1>
+                    <h1 class="text-center my-4" style="padding: 3vh;">South Sudan BluePump Gallery</h1>
                 </div>
             </div>
             <div class="row">
                 {% for image in country_images %}
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
-                            <a href="{{ url_for('static', filename='images/' + image.filename) }}" data-lightbox="gallery" data-title="Sudan BluePump Gallery">
+                            <a href="{{ url_for('static', filename='images/' + image.filename) }}" data-lightbox="gallery" data-title="South Sudan BluePump Gallery">
                                 <div class="card-img-container">
-                                    <img src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top" alt="Sudan BluePump Image">
+                                    <img src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top" alt="South Sudan BluePump Image">
                                 </div>
                             </a>
                         </div>

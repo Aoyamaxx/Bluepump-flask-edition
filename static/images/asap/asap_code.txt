@@ -1,0 +1,4 @@
+@app.route('/gallery_asap')
+def gallery_asap():
+    country_images = [{'filename': 'asap/asap1.jpg'}, {'filename': 'asap/asap2.jpg'}, {'filename': 'asap/asap3.jpg'}, {'filename': 'asap/asap4.jpg'}, {'filename': 'asap/asap5.jpg'}, {'filename': 'asap/asap6.jpg'}, {'filename': 'asap/asap7.jpg'}, {'filename': 'asap/asap8.jpg'}, {'filename': 'asap/asap9.jpg'}]
+    return render_template('gallery_asap.html', country_images=country_images)
