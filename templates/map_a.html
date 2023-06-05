@@ -19,6 +19,13 @@
 
         <script>let serverVisitorId = '{{ visitor_id }}';</script>
 
+        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script>
+            Weglot.initialize({
+                api_key: 'wg_480640ec939bfcac796a5645ffb7ed574'
+            });
+        </script>
+
         <style>
             body {
 				margin: 0;
@@ -109,36 +116,6 @@
             	<div id="map"></div>
         	</div>
 		</div>
-        <div class="legend-box">
-                <!-- Create the legend box -->
-                <div class="legend">
-
-                    <!-- Create the heading for the legend -->
-                    <div class="legend-text">
-                        <h3>Pump status:</h3>
-                    </div>
-
-                    <!-- Create the icon and text for each legend item -->
-                    <div class="legend-text">
-                        <span class="icon" style="background-image: url({{ url_for('static', filename='jointhepic/Legend10.svg') }})"></span>
-                        <span class="legend-label">Maintained</span>
-                    </div>
-
-                    <div class="legend-text">
-                        <span class="icon" style="background-image: url({{ url_for('static', filename='jointhepic/Legend9.svg') }})></span>
-                        <span class="legend-label">Maintenance needed</span>
-                    </div>
-
-                    <div class="legend-text">
-                        <span class="icon" style="background-image: url({{ url_for('static', filename='jointhepic/Legend8.svg') }})"></span>
-                        <span class="legend-label">Urgent maintenance needed</span>
-                    </div>
-                    <div class="legend-text">
-                        <span class="icon" style="background-image: url({{ url_for('static', filename='jointhepic/Legend7.svg') }})"></span>
-                        <span class="legend-label">Ghost pump</span>
-                    </div>
-                </div>
-            </div>
             <script>
                 mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViYXN0aWFuZ3JhZWZmIiwiYSI6ImNsMGR0NGw3cTAzMDAzZGxwZGl5bnR5Z2UifQ.U-eNkITMkqBtWTB532MbBA';
                 const map = new mapboxgl.Map({
@@ -204,35 +181,6 @@
                                     ],
                                 }
                             });
-                        });
-                        // When a click event occurs on a feature in the places layer, open a popup at the
-                        // location of the feature, with description HTML from its properties.
-                        map.on('click', 'markers', (e) => {
-                            // Copy coordinates array.
-                            const coordinates = e.features[0].geometry.coordinates.slice();
-                            const description = e.features[0].properties.description;
-
-                            // Ensure that if the map is zoomed out such that multiple
-                            // copies of the feature are visible, the popup appears
-                            // over the copy being pointed to.
-                            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                            }
-
-                            new mapboxgl.Popup()
-                                .setLngLat(coordinates)
-                                .setHTML(description)
-                                .addTo(map);
-                        });
-
-                        // Change the cursor to a pointer when the mouse is over the places layer.
-                        map.on('mouseenter', 'places', () => {
-                            map.getCanvas().style.cursor = 'pointer';
-                        });
-
-                        // Change it back to a pointer when it leaves.
-                        map.on('mouseleave', 'places', () => {
-                            map.getCanvas().style.cursor = '';
                         });
                     });
             </script>

@@ -16,6 +16,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
+        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script>
+            Weglot.initialize({
+                api_key: 'wg_480640ec939bfcac796a5645ffb7ed574'
+            });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
         <style>
             .card {
                 overflow: hidden;
@@ -57,7 +66,7 @@
                         <div class="card h-100">
                             <a href="{{ url_for('static', filename='images/' + image.filename) }}" data-lightbox="gallery" data-title="Burkina Faso BluePump Gallery">
                                 <div class="card-img-container">
-                                    <img src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top" alt="Burkina Faso BluePump Image">
+                                    <img data-src="{{ url_for('static', filename='images/' + image.filename) }}" class="card-img-top lazyload" alt="Burkina Faso BluePump Image">
                                 </div>
                             </a>
                         </div>

@@ -13,6 +13,13 @@
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
+        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script>
+            Weglot.initialize({
+                api_key: 'wg_480640ec939bfcac796a5645ffb7ed574'
+            });
+        </script>
+
         <script>let serverVisitorId = '{{ visitor_id }}';</script>
         <style>
             .subtitle {

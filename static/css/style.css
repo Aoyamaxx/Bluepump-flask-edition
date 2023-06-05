@@ -442,10 +442,11 @@ a.footer-logo {
   line-height: 1.5;
   margin-top: 0px;
   margin-bottom: 50px;
-  padding-left: 5vh;
+  padding-left: 5vh;s
 }
 
 .video-background, .image-background {
+  background-color: black;
   position: absolute;
   top: 0;
   left: 0;

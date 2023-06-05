@@ -3,9 +3,11 @@ from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 from flask import jsonify
+from PIL import Image
 import random
 import uuid
 import urllib.parse
+import os
 
 # Configure app
 app = Flask(__name__)

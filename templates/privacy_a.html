@@ -13,6 +13,13 @@
 
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 
+        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script>
+            Weglot.initialize({
+                api_key: 'wg_480640ec939bfcac796a5645ffb7ed574'
+            });
+        </script>
+
         <script>let serverVisitorId = '{{ visitor_id }}';</script>
         <style>
             .subtitle {
@@ -74,7 +81,7 @@
                         <br>KVK / Chamber of Commerce: 56697074
                     </p>
 
-                    <p class="subtitle underline">Whose Data Do We Processes?</p>
+                    <p class="subtitle underline">Whose Data Do We Process?</p>
                     <p>Join the Pipe processes the personal data of each individual that visits join-the-pipe-foundation.org.</p>
 
                     <p class="subtitle underline">How Do We Receive Your Data?</p>

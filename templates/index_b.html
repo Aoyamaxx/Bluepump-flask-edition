@@ -17,7 +17,7 @@
 
     	<script>let serverVisitorId = '{{ visitor_id }}';</script>
 
-    	<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+        <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
         <script>
             Weglot.initialize({
                 api_key: 'wg_480640ec939bfcac796a5645ffb7ed574'
@@ -30,15 +30,32 @@
 
         <div id="load-donate-popup-b" style="display: none;"></div>
 
+        <div id="content">
+			<div class="container-landing">
+			  <div class="title-landing">
+				<h1>This is <span class="bluepump-title">BluePump.</span></h1>
+				<p>Designed for reliable and long-lasting operation</p>
+				<div class="donate-landing-wrapper">
+					<a id="donate-index-a" href="https://www.paypal.com/paypalme/JointhePipeFoundatio" class="donate-landing">Donate Now</a>
+				</div>
+			  </div>
+			  <video class="video-background" loop muted>
+				<source src="{{ url_for('static', filename='images/pumpvideo.mp4') }}" type="video/mp4">
+				Your browser does not support the video tag.
+			  </video>
+			  <img class="image-background" src="{{ url_for('static', filename='images/picb.jpg') }}" alt="Background image">
+			</div>
+		</div>
+
 		<div class="partners-section">
 			<h2 class="partners-title">Our Partners</h2>
 			<div class="partners-list">
 			  <img src="{{ url_for('static', filename='images/jtp.png') }}" alt="Partner 1" class="partner-logo">
-			  <img src="{{ url_for('static', filename='images/citywater.png') }}" alt="Partner 2" class="partner-logo">
-			  <img src="{{ url_for('static', filename='images/techno.png') }}" alt="Partner 3" class="partner-logo">
-			  <img src="{{ url_for('static', filename='images/adra_logo.png') }}" alt="Partner 4" class="partner-logo">
-			  <img src="{{ url_for('static', filename='images/asap_logo.png') }}" alt="Partner 5" class="partner-logo">
-			  <img src="{{ url_for('static', filename='images/fermacom_logo.png') }}" alt="Partner 6" class="partner-logo">
+			  <img src="{{ url_for('static', filename='images/techno.png') }}" alt="Partner 2" class="partner-logo">
+			  <img src="{{ url_for('static', filename='images/adra_logo.png') }}" alt="Partner 3" class="partner-logo">
+			  <img src="{{ url_for('static', filename='images/asap_logo.png') }}" alt="Partner 4" class="partner-logo">
+			  <img src="{{ url_for('static', filename='images/fermacom_logo.png') }}" alt="Partner 5" class="partner-logo">
+			  <img src="{{ url_for('static', filename='images/baanderij_logo.jpg') }}" alt="Partner 6" class="partner-logo">
 			  <img src="{{ url_for('static', filename='images/obakki_logo.png') }}" alt="Partner 7" class="partner-logo">
 			  <img src="{{ url_for('static', filename='images/partnerspaysdogon_logo.jpg') }}" alt="Partner 8" class="partner-logo">
 			  <img src="{{ url_for('static', filename='images/kenya_red.png') }}" alt="Partner 9" class="partner-logo">
